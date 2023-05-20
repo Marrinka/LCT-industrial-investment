@@ -1,4 +1,73 @@
-.welcomeContainer {
+.main_page {
+    margin: 0;
     width: 100vw;
-    background: #000;
+    height: 100vh;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: url("../../img/main_background.png");
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+.main_page__head {
+    width: 893px;
+    height: 122px;    
+
+    margin-top: 157px;
+    margin-left: 8vh;
+    
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 170%;
+    
+}
+
+.main_page__devider {
+    margin-left: 8vh;
+    margin-top: 68px;
+
+    width: 734px;
+    height: 0px;
+
+    border: 2px solid #FFFFFF;
+
+}
+
+.main_page__text {
+    margin-left: 8vh;
+    margin-top: 23px;
+
+    width: 698px;
+    height: 113px;
+
+    font-size: 18px;
+    line-height: 170%;
+}
+
+.main_page__button {
+    margin-left: 8vh;
+    margin-top: 100px;
+    
+    width: 407.5px;
+    height: 34px;
+    
+    display: flex;
+    gap: 43px;
+    align-items: center;
+}
+
+.main_page__button:hover {
+    cursor: pointer;
+}
+
+.button__descr {
+    font-size: 20px;
+}
+
+.button__arrow {
+    width: 82.5px;
+    height: 11.5px;
+    padding-top: 10px;
 }
