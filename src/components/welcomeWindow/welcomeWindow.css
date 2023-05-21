@@ -1,4 +1,4 @@
-.main_page {
+.mainPage {
     margin: 0;
     width: 100vw;
     height: 100vh;
@@ -10,7 +10,7 @@
     color: #FFFFFF;
 }
 
-.main_page__head {
+.mainPageHead {
     width: 893px;
     height: 122px;    
 
@@ -24,7 +24,7 @@
     
 }
 
-.main_page__devider {
+.mainPageDevider {
     margin-left: 8vh;
     margin-top: 68px;
 
@@ -35,7 +35,7 @@
 
 }
 
-.main_page__text {
+.mainPageText {
     margin-left: 8vh;
     margin-top: 23px;
 
@@ -46,7 +46,7 @@
     line-height: 170%;
 }
 
-.main_page__button {
+.mainPageButton {
     margin-left: 8vh;
     margin-top: 100px;
     
@@ -58,15 +58,15 @@
     align-items: center;
 }
 
-.main_page__button:hover {
+.mainPageButton:hover {
     cursor: pointer;
 }
 
-.button__descr {
+.buttonDescr {
     font-size: 20px;
 }
 
-.button__arrow {
+.buttonArrow {
     width: 82.5px;
     height: 11.5px;
     padding-top: 10px;
