@@ -1,5 +1,7 @@
 import './welcomeWindow.css';
 
+import arrowPhoto from '../../img/arrow.png';
+
 const WelcomeWindow = ({onScrollToCalc}) => {
     return (
         <div className="mainPage">
@@ -17,7 +19,7 @@ const WelcomeWindow = ({onScrollToCalc}) => {
                     РАССЧИТАТЬ СТОИМОСТЬ
                 </div>
                 <div className="buttonArrow">
-                    <img src={require('../../img/arrow.png')} alt="arrow" />
+                    <img src={arrowPhoto} alt="arrow" />
                 </div>
             </div>
         </div>

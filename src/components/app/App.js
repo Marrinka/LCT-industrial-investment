@@ -1,10 +1,9 @@
-import { Component } from 'react';
+import WelcomeWindow from "../welcomeWindow/WelcomeWindow.js";
+import Calculator from '../calculator/calculator.js';
 
-import WelcomeWindow from "../welcomeWindow/WelcomeWindow";
-import Calculator from '../calculator/calculator';
 
-class App extends Component{
-    scrollToCalc = () => {
+const App = () => {
+    const scrollToCalc = () => {
         window.scrollTo({
             top: window.innerHeight,
             left: 0,
@@ -13,15 +12,13 @@ class App extends Component{
         });
     }
 
-    render() {
-        return (
-            <div className="App">
-                <WelcomeWindow 
-                onScrollToCalc = {this.scrollToCalc}/>
-                <Calculator/>
-            </div>
-        );
-    }
+    return (
+        <div className="App">
+            <WelcomeWindow 
+            onScrollToCalc = {scrollToCalc}/>
+            <Calculator/>
+        </div>
+    );
 
 }
 
