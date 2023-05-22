@@ -1,0 +1,55 @@
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    width: 506px;
+    height: 60px;
+    border: 1px solid rgba(17, 17, 17, 0.85);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    padding-left: 8px;
+}
+
+legend {
+    background: transparent;
+    margin-left: 30px;
+    padding: 0;
+}
+
+.offLegend {
+    margin-top: 29.6px;
+    height: 57px;
+    padding-bottom: 4px;
+}
+
+select {
+    width: 444px;
+    height: 34px;
+    border: none;
+    border-radius: 13px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    font-size: 20px;
+    color: rgba(17, 17, 17, 0.85);
+    background-image: url('../../img/selectorArrow.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 16px;
+    
+}
+
+.nonSelected {
+    color: #6B6767;
+}
+
+select:focus,
+select:hover {
+    outline: none;
+    cursor: pointer;
+}
+

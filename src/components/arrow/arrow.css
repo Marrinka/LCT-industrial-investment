@@ -1,0 +1,24 @@
+.navigationButton {
+    display: flex;
+    flex-direction: column;
+    width: 112px;
+    height: 60px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.navigationButton:hover {
+    cursor: pointer;
+}
+
+.rotation {
+    transform: scale(-1, 1)
+}
+
+.unavailable{
+    color: #D9D9D9;
+}
+
+.availabe {
+    color: black;
+}
