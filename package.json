@@ -19,7 +19,9 @@
   "scripts": {
     "start": "cd client && react-scripts start",
     "server": "node database/db.js & nodemon server/app.js",
-    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "cd client gh-pages -d build",
+    "build": "cd client && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -44,5 +46,9 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  },
+  "homepage": "https://github.com/Marrinka/LCT-industrial-investment"
 }
