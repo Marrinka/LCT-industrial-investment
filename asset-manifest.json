@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/LCT-industrial-investment/static/css/main.72773d16.css",
+    "main.js": "/LCT-industrial-investment/static/js/main.63c00953.js",
+    "static/media/main_background.png": "/LCT-industrial-investment/static/media/main_background.dabe91b409b0aa7fe964.png",
+    "index.html": "/LCT-industrial-investment/index.html",
+    "main.72773d16.css.map": "/LCT-industrial-investment/static/css/main.72773d16.css.map",
+    "main.63c00953.js.map": "/LCT-industrial-investment/static/js/main.63c00953.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72773d16.css",
+    "static/js/main.63c00953.js"
+  ]
+}
