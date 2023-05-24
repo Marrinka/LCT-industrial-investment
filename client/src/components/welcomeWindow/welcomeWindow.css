@@ -8,14 +8,16 @@
     background-image: url("../../img/main_background.png");
     background-size: cover;
     color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .mainPageHead {
     width: 893px;
     height: 122px;    
 
-    margin-top: 157px;
-    margin-left: 8vh;
+    margin-left: 14vh;
     
     font-family: 'Inter';
     font-weight: 700;
@@ -25,7 +27,7 @@
 }
 
 .mainPageDevider {
-    margin-left: 8vh;
+    margin-left: 14vh;
     margin-top: 68px;
 
     width: 734px;
@@ -36,7 +38,7 @@
 }
 
 .mainPageText {
-    margin-left: 8vh;
+    margin-left: 14vh;
     margin-top: 23px;
 
     width: 698px;
@@ -47,7 +49,7 @@
 }
 
 .mainPageButton {
-    margin-left: 8vh;
+    margin-left: 14vh;
     margin-top: 100px;
     
     width: 407.5px;

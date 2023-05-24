@@ -1,28 +1,73 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react';
 
-import './select.css'
+import './select.css';
 
 const Select = ({legend, options, name}) => {
 
-    const [selectState, setSelectState] = useState(false);
-    
-    const seletOption = () => {
-        setSelectState((!selectState) ? !selectState : selectState);
+    const [chosenOption, chooseOption] = useState(legend);
+    const [searching, searchingOption] = useState(false);
+    const [possibleOptions, filterOptions] = useState(options);
+    const [inputValue, changeInputValue] = useState('');
+
+
+    const onChooseOption = (option) => {
+        chooseOption(option);
+        changeInputValue(option);
     }
 
+    const onFilterOptions = (term) => {
+        let items = [...options];
+        if (term.length === 0) {
+            filterOptions(items);
+        }
+        else {
+            filterOptions(items.filter(item => item.text.toLowerCase().indexOf(term.toLowerCase()) > -1));
+        }
+    }
+    
+    const onSearchingOption = () => {
+        searchingOption(!searching);
+    }
+
+    
+    const myRef = useRef(null);
+
+    const clickOutside = (e) => {
+        if (myRef.current && !myRef.current.contains(e.target)) {
+          searchingOption(false);
+        }
+      };
+    
+    useEffect(() => {
+        document.addEventListener('click', clickOutside, true);
+    });
+    
+
     return (
-        <fieldset className={(!selectState) ? "offLegend" : ""}>
-            <legend>{(selectState) ? legend : ''}</legend>
-            <select required
-                name={name} 
-                onChange={seletOption}
-                className={(!selectState) ? "nonSelected" : ""}
-                id={name}>
-                <option selected disabled hidden>{legend}</option>
-                {options.map(item => (
-                    <option value={item.value}>{item.text}</option>
-                ))}
-            </select>
+        <fieldset className={(chosenOption === legend && !searching) ? "offLegend" : ""}
+            onClick={onSearchingOption}>
+            <legend>{(chosenOption !== legend || searching) ? legend : ''}</legend>
+
+            <div className={((chosenOption === legend || searching) ? "default" : "chosen") + ((searching) ? ' hidden' : '')}>{chosenOption}</div>
+
+            <input type="text" 
+                className={'searchOption ' + ((!searching) ? 'hidden' : '')}
+                onChange={(e) => {onFilterOptions(e.target.value);
+                changeInputValue(e.target.value)}}
+                value={inputValue}/>
+
+            <div className={"devider" + ((!searching) ? 'hidden' : '')}></div>
+            
+            {(searching) ? 
+            (
+                <div className="optionsWrapper" ref={myRef}>
+                    {possibleOptions.map(item => (
+                        <div className={item.value + ' option '}
+                            onClick={() => onChooseOption(item.text)}>{item.text}</div>
+                    ))}
+                </div>
+            ) : <div className="devider"></div>}
+            
         </fieldset>
     )
 

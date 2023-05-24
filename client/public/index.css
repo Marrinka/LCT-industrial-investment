@@ -1,5 +1,9 @@
 * {
     font-family: 'Montserrat';
     font-weight: 500;
-    
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
