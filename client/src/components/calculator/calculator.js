@@ -9,6 +9,7 @@ const Calculator = () => {
     return (
         <div className="calculatorContainer">
             <Heading/>
+            <Arrow/>
         </div>
     )
 }
