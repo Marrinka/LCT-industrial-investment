@@ -1,15 +1,16 @@
 import './calculator.css';
 
 import Heading from '../heading/heading.js';
-import Arrow from "../arrow/arrow.js";
-import Select from '../select/select.js';
+
+
+import FirstStep from '../firstStep/firstStep.js';
 
 const Calculator = () => {
 
     return (
         <div className="calculatorContainer">
             <Heading/>
-            <Arrow/>
+            <FirstStep/>
         </div>
     )
 }

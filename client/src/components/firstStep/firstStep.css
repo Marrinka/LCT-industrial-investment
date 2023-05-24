@@ -1,0 +1,171 @@
+.container {
+    width: 1317px;
+    height: 620px;
+    border: 1px solid rgba(17, 17, 17, 0.85);
+    border-radius: 13px;
+    margin-top: 20px;
+}
+
+.head {
+    height: 100px;
+    display: flex;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.description {
+    width: 786px;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(17, 17, 17, 0.85);
+    padding-left: 28px;
+    border-right: 1px solid #D9D9D9;
+}
+
+.boldText {
+    width: 716px;
+    height: 37px;
+    font-weight: 600;
+    font-size: 22px;
+    color: rgba(17, 17, 17, 0.85);
+    margin-top: 22px;
+    margin-bottom: 2px;
+}
+
+
+.opf {
+    width: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.opfChecker {
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(17, 17, 17, 0.85);
+    display: flex;
+    margin-top: 8px;
+}
+
+.iBusiness {
+    width: 53px;
+    height: 44px;
+    margin-left: 38px;
+    border: 1px solid rgba(17, 17, 17, 0.85);
+    border-right: none;
+    border-radius: 13px 0px 0px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.juridical {
+    width: 227px;
+    height: 44px;
+    border: 1px solid rgba(17, 17, 17, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nothing {
+    width: 175px;
+    height: 44px;
+    border: 1px solid rgba(17, 17, 17, 0.85);
+    border-left: none;
+    border-radius: 0px 13px 13px 0px;
+    margin-right: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opfSubtitile {
+    height: 24px;
+    margin-right: 30px;
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: rgba(17, 17, 17, 0.85);
+}
+
+
+.mainIndustry {
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    padding-top: 36px;
+}
+
+.forIBusiness{
+    height: 268px;
+    background: rgba(217, 217, 217, 0.25);
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+    display: flex;
+
+}
+
+.sectionLegend {
+    margin-left: 40px;
+}
+
+.patent {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 44px;
+    
+}
+
+.selectHeading {
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(17, 17, 17, 0.85);
+    margin-bottom: 32px;
+}
+
+.alreadyHave {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(17, 17, 17, 0.85);
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 50%;
+    
+}
+
+.priceDescription {
+    margin-top: 46px;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(17, 17, 17, 0.85);
+}
+
+.calculatedPrice {
+    margin-top: 54px;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(17, 17, 17, 0.85);
+}
+
+.arrowNextWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}

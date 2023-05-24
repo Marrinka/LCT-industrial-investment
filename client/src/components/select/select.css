@@ -1,7 +1,10 @@
-fieldset {
+.selectorWrapper {
+    font-size: 20px;
+}
+
+.selectFieldset {
     padding: 0;
     margin: 0;
-    margin-top: 20px;
     
     width: 506px;
     height: 60px;
@@ -19,24 +22,22 @@ fieldset {
     background-repeat: no-repeat;
     background-position-x: 480px;
     background-position-y: 28px;
-
-    font-size: 20px;
-
 }
 
-fieldset:hover {
+.selectFieldset:hover {
     cursor: pointer;
     background: #F5F5F5;
 }
 
-legend {
+.selectLegend {
     margin-left: 30px;
     padding: 0;
     color: rgba(17, 17, 17, 0.85);
+    color: #6B6767;
 }
 
 .offLegend {
-    margin-top: 29.6px;
+    margin-top: 9.6px;
     height: 57px;
     padding-bottom: 4px;
 }
@@ -55,6 +56,7 @@ legend {
     color: rgba(17, 17, 17, 0.85);
 }
 
+
 .searchOption {
     position: absolute;
     top: 6px;
@@ -67,12 +69,9 @@ legend {
     background: transparent;
 }
 
-.devider {
-    margin-top: 15px;
-}
-
 .optionsWrapper {
     width: 480px;
+    margin-top: 10px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 13px;

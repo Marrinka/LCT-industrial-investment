@@ -5,6 +5,9 @@
     height: 60px;
     font-weight: 600;
     font-size: 20px;
+    margin-top: 28px;
+    margin-right: 46px;
+    margin-left: 46px;
 }
 
 .navigationButton:hover {

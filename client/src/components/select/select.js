@@ -4,7 +4,7 @@ import './select.css';
 
 const Select = ({legend, options, name}) => {
 
-    const [chosenOption, chooseOption] = useState(legend);
+    const [chosenOption, chooseOption] = useState((legend) ? legend : ' ');
     const [searching, searchingOption] = useState(false);
     const [possibleOptions, filterOptions] = useState(options);
     const [inputValue, changeInputValue] = useState('');
@@ -44,31 +44,31 @@ const Select = ({legend, options, name}) => {
     
 
     return (
-        <fieldset className={(chosenOption === legend && !searching) ? "offLegend" : ""}
+        <div className="selectorWrapper">
+            <fieldset className={((chosenOption === legend && !searching) ? "offLegend" : "") + " selectFieldset"}
             onClick={onSearchingOption}>
-            <legend>{(chosenOption !== legend || searching) ? legend : ''}</legend>
+                <legend className='selectLegend'>{(chosenOption !== legend || searching) ? legend : ''}</legend>
 
-            <div className={((chosenOption === legend || searching) ? "default" : "chosen") + ((searching) ? ' hidden' : '')}>{chosenOption}</div>
+                <div className={((chosenOption === legend || searching) ? "default" : "chosen") + ((searching) ? ' hidden' : '')}>{chosenOption}</div>
 
-            <input type="text" 
-                className={'searchOption ' + ((!searching) ? 'hidden' : '')}
-                onChange={(e) => {onFilterOptions(e.target.value);
-                changeInputValue(e.target.value)}}
-                value={inputValue}/>
+                <input type="text" 
+                    className={'searchOption' + ((!searching) ? ' hidden' : '')}
+                    onChange={(e) => {onFilterOptions(e.target.value);
+                    changeInputValue(e.target.value)}}
+                    value={inputValue}/>
+                
+            </fieldset>
 
-            <div className={"devider" + ((!searching) ? 'hidden' : '')}></div>
-            
             {(searching) ? 
-            (
-                <div className="optionsWrapper" ref={myRef}>
-                    {possibleOptions.map(item => (
-                        <div className={item.value + ' option '}
-                            onClick={() => onChooseOption(item.text)}>{item.text}</div>
-                    ))}
-                </div>
-            ) : <div className="devider"></div>}
-            
-        </fieldset>
+                (
+                    <div className="optionsWrapper" ref={myRef}>
+                        {possibleOptions.map(item => (
+                            <div className={item.value + ' option '}
+                                onClick={() => onChooseOption(item.text)}>{item.text}</div>
+                        ))}
+                    </div>
+                ) : <div className="devider"></div>}
+        </div>
     )
 
 }
