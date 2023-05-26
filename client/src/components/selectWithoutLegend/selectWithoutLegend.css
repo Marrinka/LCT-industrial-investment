@@ -1,0 +1,9 @@
+.withoutLegend {
+    margin-top: 12px;
+    color: rgba(17, 17, 17, 0.85);
+}
+
+.chosenWithoutLegend {
+    margin-top: 18px;
+    color: rgba(17, 17, 17, 0.85);
+}

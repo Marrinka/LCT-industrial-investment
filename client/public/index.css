@@ -1,6 +1,8 @@
 * {
     font-family: 'Montserrat';
     font-weight: 500;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
 }
 
 body {

@@ -6,7 +6,7 @@
     padding: 0;
     margin: 0;
     
-    width: 506px;
+    width: 374px;
     height: 60px;
 
     border: 1px solid rgba(17, 17, 17, 0.85);
@@ -16,11 +16,12 @@
     position: relative;
 
     padding-bottom: 10px;
-    padding-left: 16px;
+    padding-left: 33px;
 
     background-image: url('../../img/selectorArrow.png');
     background-repeat: no-repeat;
-    background-position-x: 480px;
+    
+    background-position-x: 364px;
     background-position-y: 28px;
 }
 
@@ -32,14 +33,13 @@
 .selectLegend {
     margin-left: 30px;
     padding: 0;
-    color: rgba(17, 17, 17, 0.85);
     color: #6B6767;
 }
 
 .offLegend {
     margin-top: 9.6px;
     height: 57px;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
 }
 
 .hidden {
@@ -63,14 +63,16 @@
     outline: none;
     border: none;
     font-size: 20px;
-    width: 506px;
+    color: rgba(17, 17, 17, 0.85);
+    width: 374px;
     height: 20px;
-    padding-bottom: 60px;
+    padding: 0;
+    padding-top: 2px;
     background: transparent;
 }
 
 .optionsWrapper {
-    width: 480px;
+    width: 436px;
     margin-top: 10px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -85,7 +87,7 @@
 }
 
 .option {
-    width: 424px;
+    width: 380px;
     height: 42px;
     padding: 10px 28px;
     padding-right: 0px;

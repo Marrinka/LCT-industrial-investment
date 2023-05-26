@@ -10,6 +10,10 @@
     margin-left: 46px;
 }
 
+.text {
+    text-align: center;
+}
+
 .navigationButton:hover {
     cursor: pointer;
 }
