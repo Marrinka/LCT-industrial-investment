@@ -2,9 +2,6 @@
     margin: 0;
     width: 1920px;
     height: 100vh;
-    position: absolute;
-    left: 0px;
-    top: 0px;
     background-image: url("../../img/main_background.png");
     background-size: cover;
     display: flex;

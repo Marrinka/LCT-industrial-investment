@@ -14,6 +14,7 @@ const Select = ({legend, options, onChangeIndustry, chosen}) => {
         chooseOption(option);
         changeInputValue(option);
         onChangeIndustry(option);
+        searchingOption(false);
     }
 
     const onFilterOptions = (term) => {

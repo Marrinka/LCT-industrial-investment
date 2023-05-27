@@ -14,6 +14,7 @@ const SelectWithoutLegend = ({legend, options, onChangePatent, patent}) => {
     const onChooseOption = (option) => {
         onChangePatent(option);
         changeInputValue(option);
+        searchingOption(false);
     }
 
     const onFilterOptions = (term) => {

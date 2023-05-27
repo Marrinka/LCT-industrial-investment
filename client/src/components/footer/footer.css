@@ -1,0 +1,16 @@
+.footer {
+    margin-top: 151px;
+    height: 373px;
+    width: 1920px;
+    position: absolute;
+    left: 0px;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footerPhoto {
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+}

@@ -1,10 +1,12 @@
+import { animated } from 'react-spring';
+
 import './secondStep.css';
 
 import Arrow from '../arrow/arrow.js';
 
-const SecondStep = ({onChangeActiveStep}) => {
+const SecondStep = ({onChangeActiveStep, style}) => {
     return  (
-        <div className="secondStepContainer">
+        <animated.div className="secondStepContainer" style={style}>
             <div className="stepHead">
                 <div className="stepDescription">
                     <div className="boldText">
@@ -18,7 +20,7 @@ const SecondStep = ({onChangeActiveStep}) => {
                 <Arrow
                     text="Далее"
                     rotation={false}
-                    availabe={false}
+                    availabe={'true'}
                     onChangeActiveStep={onChangeActiveStep}/>
                 <Arrow
                     text="Назад"
@@ -26,7 +28,7 @@ const SecondStep = ({onChangeActiveStep}) => {
                     availabe={'true'}
                     onChangeActiveStep={onChangeActiveStep}/>
             </div>
-        </div>
+        </animated.div>
     )
 }
 

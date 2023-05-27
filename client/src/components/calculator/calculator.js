@@ -26,15 +26,20 @@ const Calculator = () => {
         
     }
 
-    // const expanding = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 1800});
+    const expanding = useSpring({
+        opacity: 1,
+        transform: "translateY(0)",
+        from: { opacity: 0, transform: "translateY(20px)" },
+        reset: true
+      });
 
     return (
         <div className="calculatorContainer">
             <Heading/>
-            {(activeStep === 1) ? <FirstStep onChangeActiveStep={changeActiveStep}/> : <HiddenStep step='Шаг 1. Выбор отрасли ведения хозяйственной деятельности'/>}
-            {(activeStep === 2) ? <SecondStep onChangeActiveStep={changeActiveStep}/> : <HiddenStep step='Шаг 2. Территория расположения производства'/>}
-            {(activeStep === 3) ? <ThirdStep onChangeActiveStep={changeActiveStep}/> : <HiddenStep step='Шаг 3. Использование ресурсов'/>}
-            {(activeStep === 4) ? <FourthStep onChangeActiveStep={changeActiveStep}/> : <HiddenStep step='Шаг 4. Дополнительные услуги'/>}
+            {(activeStep === 1) ? <FirstStep onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 1. Выбор отрасли ведения хозяйственной деятельности'/>}
+            {(activeStep === 2) ? <SecondStep onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 2. Территория расположения производства'/>}
+            {(activeStep === 3) ? <ThirdStep onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 3. Использование ресурсов'/>}
+            {(activeStep === 4) ? <FourthStep onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 4. Дополнительные услуги'/>}
         </div>
     )
 }
