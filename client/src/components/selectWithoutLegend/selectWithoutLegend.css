@@ -4,6 +4,10 @@
 }
 
 .chosenWithoutLegend {
-    margin-top: 18px;
+    margin-top: 12px;
     color: rgba(17, 17, 17, 0.85);
+}
+
+.devided {
+    border-bottom: 1px solid #D9D9D9;
 }

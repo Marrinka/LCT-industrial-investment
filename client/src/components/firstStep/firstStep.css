@@ -105,23 +105,25 @@
     height: 156px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .selectIndustry {
     margin-top: 43px;
-    margin-left: 136px;
-}
-
-.onlySelector {
-    margin-left: 300px;
+    margin-left: 436px;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    z-index: 3;
 }
 
 /* ................................................ */
 
 .opfRegistration {
     height: 100%;
-    margin-right: 64px;
+    position: absolute;
+    left: 694px;
     display: flex;
+    transition: transform 2s ease-in-out 5s;
 }
 
 .opfRegistrationText {
@@ -129,7 +131,7 @@
     font-size: 20px;
     height: 34px;
     margin-right: 22px;
-    margin-top: 73px;
+    margin-top: 70px;
 }
 
 .opfCheckerRegister {

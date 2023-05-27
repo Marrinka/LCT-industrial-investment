@@ -3,16 +3,16 @@ import { useState, useRef, useEffect } from 'react';
 import './selectWithoutLegend.css';
 import '../select/select.css'
 
-const SelectWithoutLegend = ({legend, options, name}) => {
+const SelectWithoutLegend = ({legend, options, onChangePatent, patent}) => {
 
-    const [chosenOption, chooseOption] = useState((legend) ? legend : ' ');
+    // const [chosenOption, chooseOption] = useState((legend) ? legend : ' ');
     const [searching, searchingOption] = useState(false);
     const [possibleOptions, filterOptions] = useState(options);
     const [inputValue, changeInputValue] = useState('');
 
 
     const onChooseOption = (option) => {
-        chooseOption(option);
+        onChangePatent(option);
         changeInputValue(option);
     }
 
@@ -49,7 +49,7 @@ const SelectWithoutLegend = ({legend, options, name}) => {
             <fieldset className={"selectFieldset offLegend"}
             onClick={onSearchingOption}>
 
-                <div className={((chosenOption === legend || searching) ? "default" : "chosenWithoutLegend") + ((searching) ? ' hidden' : '')}>{chosenOption}</div>
+                <div className={((searching) ? "default" : "chosenWithoutLegend") + ((searching) ? ' hidden' : '')}>{patent}</div>
 
                 <input type="text" 
                     className={'searchOption' + ((!searching) ? ' hidden' : '') + ' withoutLegend'}
@@ -62,12 +62,14 @@ const SelectWithoutLegend = ({legend, options, name}) => {
             {(searching) ? 
                 (
                     <div className="optionsWrapper" ref={myRef}>
+                        <div className="devided option"
+                             onClick={() => onChooseOption('Патент уже приобретен')}>Патент уже приобретен</div>
                         {possibleOptions.map(item => (
                             <div className={item.value + ' option '}
                                 onClick={() => onChooseOption(item.text)}>{item.text}</div>
                         ))}
                     </div>
-                ) : <div className="devider"></div>}
+                ) : <div></div>}
         </div>
     )
 

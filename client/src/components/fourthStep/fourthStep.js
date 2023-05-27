@@ -1,33 +1,31 @@
-import './secondStep.css';
+import './fourthStep.css';
 
 import Arrow from '../arrow/arrow.js';
 
-const SecondStep = ({onChangeActiveStep}) => {
+const FourthStep = () => {
     return  (
-        <div className="secondStepContainer">
+        <div className="fourthStepContainer">
             <div className="stepHead">
                 <div className="stepDescription">
                     <div className="boldText">
-                    Шаг 2. Территория расположения производства
+                    Шаг 4. Дополнительные услуги
                     </div>
                     Пожалуйста, выберите округ расположения производства
                 </div>
             </div>
-            <div className="space"></div>
+            <div className="extra"></div>
             <div className="arrowWrapper">
                 <Arrow
-                    text="Далее"
+                    text="Рассчитать"
                     rotation={false}
-                    availabe={false}
-                    onChangeActiveStep={onChangeActiveStep}/>
+                    availabe={false}/>
                 <Arrow
                     text="Назад"
                     rotation={true}
-                    availabe={'true'}
-                    onChangeActiveStep={onChangeActiveStep}/>
+                    availabe={true}/>
             </div>
         </div>
     )
 }
 
-export default SecondStep;
+export default FourthStep;

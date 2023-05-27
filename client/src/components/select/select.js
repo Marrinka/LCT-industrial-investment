@@ -2,9 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 
 import './select.css';
 
-const Select = ({legend, options, name}) => {
+const Select = ({legend, options, onChangeIndustry, chosen}) => {
 
-    const [chosenOption, chooseOption] = useState((legend) ? legend : ' ');
+    const [chosenOption, chooseOption] = useState((chosen) ? chosen : legend);
     const [searching, searchingOption] = useState(false);
     const [possibleOptions, filterOptions] = useState(options);
     const [inputValue, changeInputValue] = useState('');
@@ -13,6 +13,7 @@ const Select = ({legend, options, name}) => {
     const onChooseOption = (option) => {
         chooseOption(option);
         changeInputValue(option);
+        onChangeIndustry(option);
     }
 
     const onFilterOptions = (term) => {
@@ -67,7 +68,7 @@ const Select = ({legend, options, name}) => {
                                 onClick={() => onChooseOption(item.text)}>{item.text}</div>
                         ))}
                     </div>
-                ) : <div className="devider"></div>}
+                ) : <div></div>}
         </div>
     )
 
