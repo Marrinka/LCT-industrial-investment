@@ -7,6 +7,8 @@ import Arrow from "../arrow/arrow.js";
 import Select from '../select/select.js';
 import SelectWithoutLegend from '../selectWithoutLegend/selectWithoutLegend.js';
 
+import gIndustries from './getIndustries.js';
+
 const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
 
     if (!localStorage.getItem('opf')) localStorage.setItem('opf', ''); 
@@ -107,6 +109,9 @@ const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
     }
 
     const opfAnimation = useSpring({ opacity: 1, from: { opacity: 0 }});
+
+    const options = gIndustries();
+    console.log(options);
 
     return (
         <animated.div className="firstStepContainer" style={style}>
