@@ -2,10 +2,10 @@ import Sequelize from 'sequelize';
 
 const config = {
     development: {
-      username: 'apple-raccoon',
-      password: 'ne_moloko',
+      username: 'root',
+      password: 'Ne_moloko4!',
       database: 'ne_moloko',
-      host: 'localhost',
+      host: '37.18.110.228',
       port: 5432,
       dialect: 'postgres',
     },
