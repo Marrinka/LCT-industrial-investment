@@ -1,16 +1,16 @@
-import express from 'express'
+import express from "express";
 
-import { Industry } from './models/Industry.js';
-import { AveragePriceMetre } from './models/AveragePriceMetre.js';
-import { Equipment } from './models/Equipment.js';
-const app = express();
+import { routerIndustries } from "./routes/getIndustries.js";
 
-app.get('/aaa', (req, res) => {
-    (async () => {
-        const newUser = await Industry.create({ name: 'chemistry1' });
-        console.log('Новый пользователь был добавлен:', newUser.toJSON());
-    })();
+export const app = express();
+app.use(express.json());
+
+app.use("/api/industries", routerIndustries);
+
+app.use((err, req, res, next) => {
+	res.status(500).json({ error: "Internal server error" });
 });
 
-app.listen(3000, () => { console.log('Server is running on port 3000');
+app.listen(3000, () => {
+	console.log("Server is running on port 3000");
 });
