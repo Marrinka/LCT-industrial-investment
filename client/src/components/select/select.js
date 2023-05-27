@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 
 import './select.css';
 
-const Select = ({legend, options, onChangeIndustry, chosen}) => {
+const Select = ({legend, options, onChangeIndustry, chosen, onChangeModal}) => {
 
     const [chosenOption, chooseOption] = useState((chosen) ? chosen : legend);
     const [searching, searchingOption] = useState(false);
@@ -15,6 +15,7 @@ const Select = ({legend, options, onChangeIndustry, chosen}) => {
         changeInputValue(option);
         onChangeIndustry(option);
         searchingOption(false);
+        if (chosenOption === legend) onChangeModal();
     }
 
     const onFilterOptions = (term) => {

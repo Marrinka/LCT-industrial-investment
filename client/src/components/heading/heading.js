@@ -1,8 +1,8 @@
 import './heading.css';
 
-const Heading = () => {
+const Heading = ({onChangeModal}) => {
     return (
-        <div className="headingWrapper">
+        <div className="headingWrapper" onMouseEnter={onChangeModal}>
             <div className="headingText">Инвеститиционный калькулятор города Москвы</div>
         </div>
     )

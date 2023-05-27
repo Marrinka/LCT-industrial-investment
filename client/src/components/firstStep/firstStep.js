@@ -7,7 +7,7 @@ import Arrow from "../arrow/arrow.js";
 import Select from '../select/select.js';
 import SelectWithoutLegend from '../selectWithoutLegend/selectWithoutLegend.js';
 
-const FirstStep = ({onChangeActiveStep, style}) => {
+const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
 
     if (!localStorage.getItem('opf')) localStorage.setItem('opf', ''); 
     const [opf, chooseOpf] = useState(localStorage.getItem('opf'));
@@ -146,7 +146,8 @@ const FirstStep = ({onChangeActiveStep, style}) => {
                                 {value: 'buildingIndustry', text:'Строительная промышленность'},
                                 {value: 'heavyIndustry', text:'Тяжелая промышленность'}]}
                                 onChangeIndustry={changeIndustry}
-                                chosen={industry}/>
+                                chosen={industry}
+                                onChangeModal={onChangeModal}/>
                         </div>
         
                 {(opf === 'nothing') ? (

@@ -1,6 +1,9 @@
+
+
 import WelcomeWindow from "../welcomeWindow/WelcomeWindow.js";
 import Calculator from '../calculator/calculator.js';
 import Footer from "../footer/footer.js";
+
 
 
 const App = () => {

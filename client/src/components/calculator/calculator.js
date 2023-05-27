@@ -10,6 +10,8 @@ import SecondStep from '../secondStep/secondStep.js';
 import ThirdStep from '../thirdStep/thirdStep.js';
 import FourthStep from '../fourthStep/fourthStep.js';
 
+import Authorization from "../authorization/authorization.js";
+
 const Calculator = () => {
 
     const [activeStep, setActiveStep] = useState(1);
@@ -26,17 +28,39 @@ const Calculator = () => {
         
     }
 
+    const [modal, setModal] = useState(false);
+    const [autherized, setAutherized] = useState(false);
+
+    const changeAutherized = () => {
+        setAutherized(true);
+    }
+
+    const changeModal = () => {
+        if (!autherized) setModal(!modal);
+    }
+
     const expanding = useSpring({
         opacity: 1,
         transform: "translateY(0)",
-        from: { opacity: 0, transform: "translateY(20px)" },
+        from: { opacity: 0, transform: (!autherized) ? "translateY(0)" : "translateY(20px)" },
         reset: true
       });
+    
+
+    const modalShow = useSpring(
+        {
+        from: {transform: 'translateX(627px)', opacity: 0},
+        to: {transform: 'translateX(0)', opacity: 1},
+        reset: true
+    });
+
+
 
     return (
         <div className="calculatorContainer">
             <Heading/>
-            {(activeStep === 1) ? <FirstStep onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 1. Выбор отрасли ведения хозяйственной деятельности'/>}
+            {(modal) ? <Authorization onShow={modalShow} onChangeModal={changeModal} onChangeAutherized={changeAutherized}/> : <div></div>}
+            {(activeStep === 1) ? <FirstStep onChangeActiveStep={changeActiveStep} style={expanding}  onChangeModal={changeModal}/> : <HiddenStep step='Шаг 1. Выбор отрасли ведения хозяйственной деятельности'/>}
             {(activeStep === 2) ? <SecondStep onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 2. Территория расположения производства'/>}
             {(activeStep === 3) ? <ThirdStep onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 3. Использование ресурсов'/>}
             {(activeStep === 4) ? <FourthStep onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 4. Дополнительные услуги'/>}
