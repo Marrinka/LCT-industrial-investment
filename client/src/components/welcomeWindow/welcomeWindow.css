@@ -38,8 +38,10 @@
     width: 698px;
     height: 113px;
 
+    font-family: 'Montserrat';
+    font-weight: 500;
     font-size: 18px;
-    line-height: 170%;
+    line-height: 170.02%;
     color: #FFFFFF;
 }
 
@@ -60,7 +62,10 @@
 }
 
 .buttonDescr {
+    font-family: 'Montserrat';
+    font-weight: 500;
     font-size: 20px;
+    line-height: 170.02%;
     color: #FFFFFF;
 }
 

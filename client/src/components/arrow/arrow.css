@@ -3,8 +3,6 @@
     flex-direction: column;
     width: 112px;
     height: 60px;
-    font-weight: 600;
-    font-size: 20px;
     margin-top: 28px;
     margin-right: 46px;
     margin-left: 46px;
@@ -12,7 +10,12 @@
 
 .text {
     text-align: center;
+    
+    font-family: 'Montserrat';
     font-weight: 600;
+    font-size: 20px;
+    line-height: 170.02%;
+    letter-spacing: 0.05em;
 }
 
 .navigationButton:hover {
