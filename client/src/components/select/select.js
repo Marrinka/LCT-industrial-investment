@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 
 import './select.css';
 
-const Select = ({legend, options, onChangeIndustry, chosen, onChangeModal, }) => {
+const Select = ({legend, options, onChangeIndustry, chosen, onChangeModal}) => {
 
     const [chosenOption, chooseOption] = useState((chosen) ? chosen : legend);
     const [searching, searchingOption] = useState(false);
@@ -15,11 +15,12 @@ const Select = ({legend, options, onChangeIndustry, chosen, onChangeModal, }) =>
 
 
     const onChooseOption = (option) => {
-        chooseOption(option);
+        const str = (option.length > 26) ? option.slice(0, 26) + '...' : option;
+        chooseOption(str);
         changeInputValue(option);
         onChangeIndustry(option);
         searchingOption(false);
-        if (chosenOption === legend) onChangeModal();
+        if (chosenOption === legend) setTimeout(onChangeModal, 2000);
     }
 
     const onFilterOptions = (term) => {
@@ -28,7 +29,7 @@ const Select = ({legend, options, onChangeIndustry, chosen, onChangeModal, }) =>
             filterOptions(items);
         }
         else {
-            filterOptions(items.filter(item => item.text.toLowerCase().indexOf(term.toLowerCase()) > -1));
+            filterOptions(items.filter(item => item.toLowerCase().indexOf(term.toLowerCase()) > -1));
         }
     }
     

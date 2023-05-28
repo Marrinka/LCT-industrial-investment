@@ -21,7 +21,7 @@ const Calculator = () => {
             setActiveStep(activeStep-1);
         }
         else {
-            if (availabe) {
+            if (availabe === 'true') {
                 setActiveStep(activeStep+1);
             }
         }
