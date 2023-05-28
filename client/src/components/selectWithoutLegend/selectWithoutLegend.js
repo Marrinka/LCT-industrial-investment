@@ -11,7 +11,8 @@ const SelectWithoutLegend = ({options, onChangePatent, patent}) => {
 
 
     const onChooseOption = (option) => {
-        onChangePatent(option);
+        const str = (option.length > 26) ? option.slice(0, 26) + '...' : option;
+        onChangePatent(str);
         changeInputValue(option);
         searchingOption(false);
     }

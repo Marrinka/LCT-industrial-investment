@@ -168,10 +168,12 @@ const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
                             <div className="opfRegistrationText">Зарегистрировать</div>
                             <div className="opfCheckerRegister">
                                 <div id="iBusinessRegister"
-                                    onClick={(e) => onChoseOpfRegister(e.target)}
+                                    onClick={(e) => {onChoseOpfRegister(e.target);
+                                        setOpfAnimated(false);}}
                                     className={(opfRegister === 'iBusinessRegister') ? 'opfActive' : ''}>ИП</div>
                                 <div id="juridicalRegister"
-                                    onClick={(e) => onChoseOpfRegister(e.target)}
+                                    onClick={(e) => {onChoseOpfRegister(e.target);
+                                        setOpfAnimated(false);}}
                                     className={(opfRegister === 'juridicalRegister') ? 'opfActive' : ''}>Юридическое лицо</div>
                             </div>
                         </animated.div>

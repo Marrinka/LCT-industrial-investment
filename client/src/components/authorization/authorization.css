@@ -1,10 +1,8 @@
-
-
 .modalFade {
     background: #000;
 	position: absolute;
     top: 0;
-	width: 100%; 
+	width: 1920px; 
 	height: 3768px;
 	background:rgba(0,0,0,.7);
     z-index: 4;
@@ -13,11 +11,15 @@
 .authorizationWrapper {
     margin: 0;
     width: 627px;
-    position: absolute;
-    right: 0px;
-    top: calc(100vh + 52px);
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* transform: translate(-50%, -50%); */
     background: white;
     z-index: 5;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .authHeading {
@@ -25,7 +27,7 @@
     margin-top: 20px;
     height: 54px;
 
-    font-family: 'Arial';
+    font-family: 'Inter';
     font-weight: 700;
     font-size: 32px;
     line-height: 170.02%;
@@ -34,7 +36,7 @@
 .personalData{
     margin-left: 40px;
     margin-right: 40px;
-    height: 497px;
+    height: 515px;
 }
 
 .dataField {
@@ -50,11 +52,12 @@ span {
     font-size: 16px;
     line-height: 170.02%;
     color: rgba(17, 17, 17, 0.85);
+    width: 237px;
 }
 
 .dataInput {
     width: 300px;
-    height: 32px;
+    height: 27px;
     border: none;
     outline: none;
     border-bottom: 1px solid rgba(17, 17, 17, 0.85);
@@ -87,6 +90,7 @@ span {
 .agreementText {
     font-size: 18px;
     margin-right: 103px;
+    width: 293px;
 }
 
 .finalStage {
@@ -116,7 +120,31 @@ span {
     cursor: pointer;
 }
 
+.alreadyAuthorized::before {
+    padding: 1px;
+    position: absolute;
+
+    margin-left: -50px;
+    margin-top: -28px;
+    width: 300px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    background-color: rgba(17, 17, 17, 0.85);
+    border-radius: 5px;
+    content: "Будет доступно в следующем обновлении";
+    opacity: 0;
+    visibility: hidden;
+}
+
+.alreadyAuthorized:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
 .alreadyAuthorized {
+    position: relative;
+
     text-align: center;
     
     font-family: 'Montserrat';
