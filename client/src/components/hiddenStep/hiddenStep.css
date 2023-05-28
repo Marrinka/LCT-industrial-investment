@@ -9,10 +9,12 @@
 }
 
 .hiddenStepText {
-    font-weight: 600;
-    font-size: 20px;
-    color: rgba(17, 17, 17, 0.85);
-
     margin-left: 29px;
     margin-top: 11px;
+
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
 }

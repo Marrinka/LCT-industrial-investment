@@ -1,11 +1,9 @@
-const gIndustries = async () => {
-    const response = fetch("http://localhost:3001/api/industries/");
-
-    console.log(response);
-    const result = (await response).json();
-    console.log(result);
-
-    return result;
+const gIndustries = async (setIndustries) => {
+    fetch("http://localhost:3001/api/industries/")
+        .then(result => result.json())
+        .then(result => {
+           setIndustries(result);
+        });
 }
 
 export default gIndustries;

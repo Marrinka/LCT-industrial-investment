@@ -23,6 +23,12 @@
     width: 237px;
     height: 81px;
     margin-right: 160px;
+
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
 }
 
 .staffDescr {
@@ -31,6 +37,12 @@
     height: 54px;
     margin-left: 94px;
     margin-top: 13px;
+
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
 }
 
 .landSquareDescr {
@@ -38,6 +50,12 @@
     width: 380px;
     height: 81px;
     margin-right: 16px;
+
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
 }
 
 .inputM {
@@ -45,6 +63,13 @@
     align-items:center;
     height: 60px;
     margin-top: 13px;
+
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170.02%;
+    letter-spacing: 0.06em;
+    color: rgba(17, 17, 17, 0.85);
 }
 
 .inputResource {
@@ -55,6 +80,13 @@
     font-size: 18px;
     text-align: center;
     margin-top: 13px;
+
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170.02%;
+    letter-spacing: 0.06em;
+    color: rgba(17, 17, 17, 0.85);
 }
 
 .unit {
@@ -63,4 +95,10 @@
     height: 41px;
     font-size: 24px;
     font-weight: 400;
+
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
 }

@@ -5,6 +5,10 @@
 
 .chosenWithoutLegend {
     margin-top: 12px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 170.02%;
     color: rgba(17, 17, 17, 0.85);
 }
 

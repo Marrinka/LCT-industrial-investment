@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
+
+import gIndustries from './getIndustries.js';
 
 import './firstStep.css';
 
@@ -7,7 +9,7 @@ import Arrow from "../arrow/arrow.js";
 import Select from '../select/select.js';
 import SelectWithoutLegend from '../selectWithoutLegend/selectWithoutLegend.js';
 
-import gIndustries from './getIndustries.js';
+
 
 const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
 
@@ -110,8 +112,14 @@ const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
 
     const opfAnimation = useSpring({ opacity: 1, from: { opacity: 0 }});
 
-    const options = gIndustries();
-    console.log(options);
+    const [industries, setIndustries] = useState([]);
+
+    useEffect(() => {
+        const getOptions = async () => gIndustries(setIndustries);
+
+        getOptions();
+    }, []);
+
 
     return (
         <animated.div className="firstStepContainer" style={style}>
@@ -145,11 +153,7 @@ const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
                         <div className={"selectIndustry"}
                             style={{transform: `translateX(${selectPosition}px)`}}>
                             <Select legend="Основная отрасль" 
-                                options={[{value: 'foodIndustry', text:'Пищевая промышленность'},
-                                {value: 'lightIndustry', text:'Легкая промышленность'},
-                                {value: 'machineBuilding', text:'Машиностроение'},
-                                {value: 'buildingIndustry', text:'Строительная промышленность'},
-                                {value: 'heavyIndustry', text:'Тяжелая промышленность'}]}
+                                options={industries}
                                 onChangeIndustry={changeIndustry}
                                 chosen={industry}
                                 onChangeModal={onChangeModal}/>

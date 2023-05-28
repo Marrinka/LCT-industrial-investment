@@ -2,12 +2,16 @@ import { useState, useRef, useEffect } from 'react';
 
 import './select.css';
 
-const Select = ({legend, options, onChangeIndustry, chosen, onChangeModal}) => {
+const Select = ({legend, options, onChangeIndustry, chosen, onChangeModal, }) => {
 
     const [chosenOption, chooseOption] = useState((chosen) ? chosen : legend);
     const [searching, searchingOption] = useState(false);
     const [possibleOptions, filterOptions] = useState(options);
     const [inputValue, changeInputValue] = useState('');
+
+    useEffect(() => {
+        filterOptions(options)
+    }, [options]);
 
 
     const onChooseOption = (option) => {
@@ -66,8 +70,8 @@ const Select = ({legend, options, onChangeIndustry, chosen, onChangeModal}) => {
                 (
                     <div className="optionsWrapper" ref={myRef}>
                         {possibleOptions.map(item => (
-                            <div className={item.value + ' option '}
-                                onClick={() => onChooseOption(item.text)}>{item.text}</div>
+                            <div className={item + ' option '}
+                                onClick={() => onChooseOption(item)}>{item}</div>
                         ))}
                     </div>
                 ) : <div></div>}
