@@ -21,11 +21,15 @@
 }
 
 .authHeading {
-    font-weight: 700;
-    font-size: 32px;
     margin-left: 40px;
     margin-top: 20px;
     height: 54px;
+
+    font-family: 'Arial';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
 }
 .personalData{
     margin-left: 40px;
@@ -41,8 +45,11 @@
 }
 
 span {
+    font-family: 'Montserrat';
     font-weight: 400;
     font-size: 16px;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
 }
 
 .dataInput {
@@ -53,8 +60,12 @@ span {
     border-bottom: 1px solid rgba(17, 17, 17, 0.85);
     padding-bottom: 5px;
     text-align: center;
+    
+    font-family: 'Montserrat';
     font-weight: 400;
     font-size: 16px;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
 }
 
 .agreement {
@@ -91,8 +102,13 @@ span {
     background: #FFFFFF;
     border: 1px solid rgba(17, 17, 17, 0.85);
     border-radius: 13px;
+    
+    font-family: 'Montserrat';
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 170.02%;
+    text-transform: uppercase;
+    color: rgba(17, 17, 17, 0.85);
 }
 
 .Authorize:hover,
@@ -101,9 +117,12 @@ span {
 }
 
 .alreadyAuthorized {
+    text-align: center;
+    
+    font-family: 'Montserrat';
     font-weight: 400;
     font-size: 16px;
-    text-align: center;
+    line-height: 170.02%;
     letter-spacing: 0.04em;
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
@@ -116,11 +135,20 @@ span {
 }
 
 .propsHeading {
+    margin-left: 40px;
+
+    font-family: 'Montserrat';
     font-weight: 500;
     font-size: 18px;
-    margin-left: 40px;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
 }
 
 .propsDescr {
     display: flex;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
 }

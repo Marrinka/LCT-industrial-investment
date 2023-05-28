@@ -52,7 +52,7 @@ const Select = ({legend, options, onChangeIndustry, chosen, onChangeModal, }) =>
 
     return (
         <div className="selectorWrapper">
-            <fieldset className={((chosenOption === legend && !searching) ? "offLegend" : "") + " selectFieldset"}
+            <fieldset className={((chosenOption === legend && !searching) ? "offLegend" : "") + " selectFieldset" + ((chosenOption === legend) ? ' backgroundArrow' : '')}
             onClick={onSearchingOption}>
                 <legend className='selectLegend'>{(chosenOption !== legend || searching) ? legend : ''}</legend>
 

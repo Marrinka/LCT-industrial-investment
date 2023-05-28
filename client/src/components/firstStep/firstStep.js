@@ -110,7 +110,10 @@ const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
         localStorage.setItem('selectPosition', x);
     }
 
-    const opfAnimation = useSpring({ opacity: 1, from: { opacity: 0 }});
+    const [opfAnimated, setOpfAnimated] = useState(false);
+
+    const opfAnimation = useSpring({ opacity: 1, from: { opacity: (opfAnimated) ? 0 : 1}, config: {duration: 500}, reset: true});
+    
 
     const [industries, setIndustries] = useState([]);
 
@@ -142,7 +145,8 @@ const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
                             className={(opf === 'juridical') ? 'opfActive' : ''}>Юридическое лицо</div>
                         <div id="nothing"
                             onClick={(e) => {onChoseOpf(e.target);
-                                changeSelectPosition(-289);}}
+                                changeSelectPosition(-289);
+                                setOpfAnimated(true);}}
                             className={(opf === 'nothing') ? 'opfActive' : ''}>Не оформлена</div>
                     </div>
                     <div className="opfSubtitile">Текущая ОПФ</div>

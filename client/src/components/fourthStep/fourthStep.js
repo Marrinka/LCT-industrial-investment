@@ -1,4 +1,5 @@
 import { animated } from 'react-spring';
+import { Link } from 'react-router-dom';
 
 import './fourthStep.css';
 
@@ -12,21 +13,25 @@ const FourthStep = ({onChangeActiveStep, style}) => {
                     <div className="boldText">
                     Шаг 4. Дополнительные услуги
                     </div>
-                    Пожалуйста, выберите округ расположения производства
+                    Пожалуйста, выберите дополнительные услуги
                 </div>
             </div>
             <div className="extra"></div>
             <div className="arrowWrapper">
-                <Arrow
-                    text="Рассчитать"
-                    rotation={false}
-                    availabe={'true'}
-                    onChangeActiveStep={onChangeActiveStep}/>
+                <Link to='/LCT-industrial-investment/results'
+                    style={{ textDecoration: 'none', color: 'rgba(17, 17, 17, 0.85)'}}>
+                    <Arrow
+                        text="Рассчитать"
+                        rotation={false}
+                        availabe={'true'}
+                        onChangeActiveStep={onChangeActiveStep}/>
+                </Link>
                 <Arrow
                     text="Назад"
                     rotation={true}
                     availabe={'true'}
                     onChangeActiveStep={onChangeActiveStep}/>
+
             </div>
         </animated.div>
     )

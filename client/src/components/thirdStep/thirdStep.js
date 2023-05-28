@@ -11,27 +11,27 @@ const ThirdStep = ({onChangeActiveStep, style}) => {
     const [objSquare, setObjSquare] = useState(localStorage.getItem('objSquare'));
     
     const changeObjSquare = (val) => {
-        setObjSquare(val);
-        localStorage.setItem('objSquare', val);
-        fourthIsAvailable(val, staff, landSquare);
+        setObjSquare(val.replace(/\D/g, ''));
+        localStorage.setItem('objSquare', val.replace(/\D/g, ''));
+        fourthIsAvailable(val.replace(/\D/g, ''), staff, landSquare);
     }
 
     if (!localStorage.getItem('staff')) localStorage.setItem('staff', '');
     const [staff, setStaff] = useState(localStorage.getItem('staff'));
     
     const changeStaff = (val) => {
-        setStaff(val);
-        localStorage.setItem('staff', val);
-        fourthIsAvailable(objSquare, val, landSquare);
+        setStaff(val.replace(/\D/g, ''));
+        localStorage.setItem('staff', val.replace(/\D/g, ''));
+        fourthIsAvailable(objSquare, val.replace(/\D/g, ''), landSquare);
     }
 
     if (!localStorage.getItem('landSquare')) localStorage.setItem('landSquare', '');
     const [landSquare, setLandSquare] = useState(localStorage.getItem('landSquare'));
     
     const changeLandSquare = (val) => {
-        setLandSquare(val);
-        localStorage.setItem('landSquare', val);
-        fourthIsAvailable(objSquare, staff, val);
+        setLandSquare(val.replace(/\D/g, ''));
+        localStorage.setItem('landSquare', val.replace(/\D/g, ''));
+        fourthIsAvailable(objSquare, staff, val.replace(/\D/g, ''));
     }
 
     if (!localStorage.getItem('arrowToFourth')) localStorage.setItem('arrowToFourth', 'false');
@@ -55,7 +55,7 @@ const ThirdStep = ({onChangeActiveStep, style}) => {
                     <div className="boldText">
                     Шаг 3. Использование ресурсов
                     </div>
-                    Пожалуйста, выберите округ расположения производства
+                    Пожалуйста, введите необходимые данные
                 </div>
             </div>
             <div className="resources">

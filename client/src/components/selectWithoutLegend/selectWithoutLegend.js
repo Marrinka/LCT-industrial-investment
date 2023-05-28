@@ -3,9 +3,8 @@ import { useState, useRef, useEffect } from 'react';
 import './selectWithoutLegend.css';
 import '../select/select.css'
 
-const SelectWithoutLegend = ({legend, options, onChangePatent, patent}) => {
+const SelectWithoutLegend = ({options, onChangePatent, patent}) => {
 
-    // const [chosenOption, chooseOption] = useState((legend) ? legend : ' ');
     const [searching, searchingOption] = useState(false);
     const [possibleOptions, filterOptions] = useState(options);
     const [inputValue, changeInputValue] = useState('');
@@ -47,7 +46,7 @@ const SelectWithoutLegend = ({legend, options, onChangePatent, patent}) => {
 
     return (
         <div className="selectorWrapper">
-            <fieldset className={"selectFieldset offLegend"}
+            <fieldset className={"selectFieldset offLegend" + ((!patent) ? ' backgroundArrow' : '')}
             onClick={onSearchingOption}>
 
                 <div className={((searching) ? "default" : "chosenWithoutLegend") + ((searching) ? ' hidden' : '')}>{patent}</div>
