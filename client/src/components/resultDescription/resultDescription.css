@@ -1,0 +1,46 @@
+.resultDescrWrapper {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
+
+    margin-top: 76px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.vertivalText {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.pFirst {
+    width: 455px;
+    height: 296px;
+}
+
+.pSecond {
+    width: 487px;
+    height: 185px;
+}
+
+.pThird {
+    width: 455px;
+    height: 333px;
+}
+
+.pFourth {
+    width: 1268px;
+    height: 111px;
+
+    margin-top: 30px;
+}
+
+.resultMap {
+    margin-left: 21px;
+}

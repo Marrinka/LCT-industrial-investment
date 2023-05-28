@@ -58,7 +58,7 @@ const Calculator = () => {
 
     return (
         <div className="calculatorContainer">
-            <Heading/>
+            <Heading headingtext='Инвеститиционный калькулятор города Москвы'/>
             {(modal) ? <Authorization onShow={modalShow} onChangeModal={changeModal} onChangeAutherized={changeAutherized}/> : <div></div>}
             {(activeStep === 1) ? <FirstStep onChangeActiveStep={changeActiveStep} style={expanding}  onChangeModal={changeModal}/> : <HiddenStep step='Шаг 1. Выбор отрасли ведения хозяйственной деятельности'/>}
             {(activeStep === 2) ? <SecondStep onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 2. Территория расположения производства'/>}
