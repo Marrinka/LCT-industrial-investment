@@ -6,7 +6,7 @@ import moscowMap from "./moscowEnum.js";
 import ZonesMap from "./zonesMap/zonesMap.js";
 
 const MoscowMap = () => {
-	const [selectedZone, setSelecedZone] = useState("DEFAUlT");
+	const [selectedZone, setSelecedZone] = useState("C");
 
 	return (
 		<div className="map">
