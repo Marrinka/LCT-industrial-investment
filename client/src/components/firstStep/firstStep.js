@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 
 import gIndustries from './getIndustries.js';
+import getPatents from './getPatents.js';
 
 import './firstStep.css';
 
@@ -9,9 +10,7 @@ import Arrow from "../arrow/arrow.js";
 import Select from '../select/select.js';
 import SelectWithoutLegend from '../selectWithoutLegend/selectWithoutLegend.js';
 
-
-
-const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
+const FirstStep = ({onChangeActiveStep, style, onChangeModal, setData}) => {
 
     if (!localStorage.getItem('opf')) localStorage.setItem('opf', ''); 
     const [opf, chooseOpf] = useState(localStorage.getItem('opf'));
@@ -114,15 +113,31 @@ const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
 
     const opfAnimation = useSpring({ opacity: 1, from: { opacity: (opfAnimated) ? 0 : 1}, config: {duration: 500}, reset: true});
     
-
     const [industries, setIndustries] = useState([]);
+    const [patents, setPatents] = useState([]);
 
     useEffect(() => {
-        const getOptions = async () => gIndustries(setIndustries);
+        const getOptions = async () => {
+            gIndustries(setIndustries);
+            getPatents(setPatents);
+        };
 
         getOptions();
     }, []);
 
+    useEffect(() => {
+        const [data, setNewData] = setData();
+
+        setNewData({...data, industry, opf, patent});
+
+    }, [industry, opf, patent]);
+
+    const getPrice = () => {
+        if (patent === 'Патент уже приобретен' || !patents.length) return 0;
+        else {
+            return 79;
+        }
+    }
 
     return (
         <animated.div className="firstStepContainer" style={style}>
@@ -186,10 +201,7 @@ const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
                     <div className="selectHeading">Выберите вид предпринимательской деятельности</div>
                     <div className="selectBusiness">
                         <SelectWithoutLegend legend="Вид деятельности"
-                            options={[{value: "first", text: "Первый вид"}, 
-                            {value: "second", text: "Второй вид"},
-                            {value: "third", text: "Третий вид"},
-                            {value: "fourth", text: "Четвертый вид"}]}
+                            options={patents.map(patent => patent.type)}
                             onChangePatent={changePatent}
                             patent={patent}
                             />
@@ -200,7 +212,7 @@ const FirstStep = ({onChangeActiveStep, style, onChangeModal}) => {
                 </div>
                 <div className="price">
                     <div className="priceDescription">Стоимость регистрации патента:</div>
-                    <div className="calculatedPrice">0 тыс. рублей</div>
+                    <div className="calculatedPrice">{getPrice()} тыс. рублей</div>
                 </div>
             </fieldset>
             <div className="arrowWrapper">

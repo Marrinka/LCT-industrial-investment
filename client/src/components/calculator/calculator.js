@@ -12,7 +12,7 @@ import FourthStep from '../fourthStep/fourthStep.js';
 
 import Authorization from "../authorization/authorization.js";
 
-const Calculator = () => {
+const Calculator = ({setData}) => {
 
     const [activeStep, setActiveStep] = useState(1);
 
@@ -60,10 +60,10 @@ const Calculator = () => {
         <div className="calculatorContainer">
             <Heading headingtext='Инвеститиционный калькулятор города Москвы'/>
             {(modal) ? <Authorization onShow={modalShow} onChangeModal={changeModal} onChangeAutherized={changeAutherized}/> : <div></div>}
-            {(activeStep === 1) ? <FirstStep onChangeActiveStep={changeActiveStep} style={expanding}  onChangeModal={changeModal}/> : <HiddenStep step='Шаг 1. Выбор отрасли ведения хозяйственной деятельности'/>}
-            {(activeStep === 2) ? <SecondStep onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 2. Территория расположения производства'/>}
-            {(activeStep === 3) ? <ThirdStep onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 3. Использование ресурсов'/>}
-            {(activeStep === 4) ? <FourthStep onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 4. Дополнительные услуги'/>}
+            {(activeStep === 1) ? <FirstStep onChangeActiveStep={changeActiveStep} style={expanding}  onChangeModal={changeModal} setData={setData}/> : <HiddenStep step='Шаг 1. Выбор отрасли ведения хозяйственной деятельности'/>}
+            {(activeStep === 2) ? <SecondStep setData={setData} onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 2. Территория расположения производства'/>}
+            {(activeStep === 3) ? <ThirdStep setData={setData} onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 3. Использование ресурсов'/>}
+            {(activeStep === 4) ? <FourthStep setData={setData} onChangeActiveStep={changeActiveStep} style={expanding}/> : <HiddenStep step='Шаг 4. Дополнительные услуги'/>}
         </div>
     )
 }

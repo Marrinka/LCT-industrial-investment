@@ -8,11 +8,14 @@ const SelectWithoutLegend = ({options, onChangePatent, patent}) => {
     const [searching, searchingOption] = useState(false);
     const [possibleOptions, filterOptions] = useState(options);
     const [inputValue, changeInputValue] = useState('');
+    
+    useEffect(() => {
+        filterOptions(options)
+    }, [options]);
 
 
     const onChooseOption = (option) => {
-        const str = (option.length > 26) ? option.slice(0, 26) + '...' : option;
-        onChangePatent(str);
+        onChangePatent(option);
         changeInputValue(option);
         searchingOption(false);
     }
@@ -50,7 +53,7 @@ const SelectWithoutLegend = ({options, onChangePatent, patent}) => {
             <fieldset className={"selectFieldset offLegend" + ((!patent) ? ' backgroundArrow' : '')}
             onClick={onSearchingOption}>
 
-                <div className={((searching) ? "default" : "chosenWithoutLegend") + ((searching) ? ' hidden' : '')}>{patent}</div>
+                <div className={((searching) ? "default" : "chosenWithoutLegend") + ((searching) ? ' hidden' : '')}>{(patent.length > 26) ? patent.slice(0, 26) + '...' : patent}</div>
 
                 <input type="text" 
                     className={'searchOption' + ((!searching) ? ' hidden' : '') + ' withoutLegend'}
@@ -66,8 +69,8 @@ const SelectWithoutLegend = ({options, onChangePatent, patent}) => {
                         <div className="devided option"
                              onClick={() => onChooseOption('Патент уже приобретен')}>Патент уже приобретен</div>
                         {possibleOptions.map(item => (
-                            <div className={item.value + ' option '}
-                                onClick={() => onChooseOption(item.text)}>{item.text}</div>
+                            <div className={item + ' option '}
+                                onClick={() => onChooseOption(item)}>{item}</div>
                         ))}
                     </div>
                 ) : <div></div>}

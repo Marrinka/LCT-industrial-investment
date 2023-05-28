@@ -2,7 +2,7 @@ import WelcomeWindow from "../welcomeWindow/WelcomeWindow.js";
 import Calculator from '../calculator/calculator.js';
 import Footer from "../footer/footer.js";
 
-const Home = () => {
+const Home = ({setData}) => {
     const scrollToCalc = () => {
         window.scrollTo({
             top: window.innerHeight + 52,
@@ -16,7 +16,7 @@ const Home = () => {
         <div className="home">
             <WelcomeWindow 
             onScrollToCalc = {scrollToCalc}/>
-            <Calculator/>
+            <Calculator setData={setData}/>
             <Footer/>
         </div>
     );
