@@ -1,14 +1,20 @@
 {
   "files": {
-    "main.css": "/LCT-industrial-investment/static/css/main.72773d16.css",
-    "main.js": "/LCT-industrial-investment/static/js/main.63c00953.js",
+    "main.css": "/LCT-industrial-investment/static/css/main.29212c00.css",
+    "main.js": "/LCT-industrial-investment/static/js/main.237bd47e.js",
     "static/media/main_background.png": "/LCT-industrial-investment/static/media/main_background.dabe91b409b0aa7fe964.png",
+    "static/media/resultMap.png": "/LCT-industrial-investment/static/media/resultMap.eb32b74eadcf6e8b1c7b.png",
+    "static/media/footer.png": "/LCT-industrial-investment/static/media/footer.c0dedfc8b94495cd16c1.png",
+    "static/media/CLogo.jpg": "/LCT-industrial-investment/static/media/CLogo.f78dd6545818e25847b1.jpg",
+    "static/media/NCLogo.jpg": "/LCT-industrial-investment/static/media/NCLogo.1002f5f9db91481ed7be.jpg",
+    "static/media/NELogo.jpg": "/LCT-industrial-investment/static/media/NELogo.bca2f8485a6eb2cd35ea.jpg",
+    "static/media/moscowLogo.jpg": "/LCT-industrial-investment/static/media/moscowLogo.9232efac8ab8992adec3.jpg",
     "index.html": "/LCT-industrial-investment/index.html",
-    "main.72773d16.css.map": "/LCT-industrial-investment/static/css/main.72773d16.css.map",
-    "main.63c00953.js.map": "/LCT-industrial-investment/static/js/main.63c00953.js.map"
+    "main.29212c00.css.map": "/LCT-industrial-investment/static/css/main.29212c00.css.map",
+    "main.237bd47e.js.map": "/LCT-industrial-investment/static/js/main.237bd47e.js.map"
   },
   "entrypoints": [
-    "static/css/main.72773d16.css",
-    "static/js/main.63c00953.js"
+    "static/css/main.29212c00.css",
+    "static/js/main.237bd47e.js"
   ]
 }
