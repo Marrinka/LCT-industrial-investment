@@ -1,0 +1,18 @@
+.tableWrapper {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 60px;
+    
+}
+
+.tableHeading{
+    width: 1268px;
+    height: 90px;
+
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 140%;
+    color: rgba(17, 17, 17, 0.85);
+}

@@ -41,24 +41,28 @@ const Authorization = ({onShow, onChangeModal, onChangeAutherized}) => {
                         <input className="dataInput" name='email' required></input>
                     </div>
                     <div className="dataField">
+                        <span>Наименование организации</span>
+                        <input className="dataInput" name='organizationName'></input>
+                    </div>
+                    <div className="dataField">
                         <span>ИНН</span>
                         <input className="dataInput" name='inn' required></input>
                     </div>
                     <div className="dataField">
                         <span>Веб-сайт организации</span>
-                        <input className="dataInput" name='web' required></input>
+                        <input className="dataInput" name='web'></input>
                     </div>
                     <div className="dataField">
                         <span>Страна</span>
-                        <input className="dataInput" name='country' required></input>
+                        <input className="dataInput" name='country'></input>
                     </div>
                     <div className="dataField">
                         <span>Город</span>
-                        <input className="dataInput" name='city' required></input>
+                        <input className="dataInput" name='city'></input>
                     </div>
                     <div className="dataField">
                         <span>Должность</span>
-                        <input className="dataInput" name='position' required></input>
+                        <input className="dataInput" name='position'></input>
                     </div>
                     <div className="agreement">
                         <input type="checkbox" name='agreement' className='agreementCheck' required/>

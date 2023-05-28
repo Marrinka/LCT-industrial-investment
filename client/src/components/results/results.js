@@ -1,6 +1,7 @@
 import Heading from "../heading/heading.js";
 import MainHeading from "../mainHeading/mainHeading.js";
 import ResultDescription from "../resultDescription/resultDescription.js";
+import TableResults from "../tableReesults/tableResults.js";
 import Footer from "../footer/footer.js";
 
 const Results = () => {
@@ -8,7 +9,9 @@ const Results = () => {
         <div className="results">
             <MainHeading headingtext='Спасибо, что воспользовались инвестиционным калькулятором города Москвы'/>
             <ResultDescription/>
+            <TableResults/>
             <Heading headingtext='Вы также можете получить детализированный отчет в удобном формате'/>
+            
             <Footer/>
         </div>
         
