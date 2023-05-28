@@ -1,0 +1,40 @@
+.moscowMap {
+    width: 530px;
+    height: 630px;
+}
+
+.textInfo {
+    width: 600px;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 110px;
+}
+
+.map p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170.02%;
+    color: #000000;
+}
+
+.map h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 170.02%;
+    color: rgba(17, 17, 17, 0.85);
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}

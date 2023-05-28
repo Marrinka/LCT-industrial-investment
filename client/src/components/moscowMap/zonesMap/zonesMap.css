@@ -1,0 +1,13 @@
+.active {
+    position: absolute;
+    overflow: visible;
+    z-index: 3;
+    scale: 1.1;
+}
+
+.zone {
+    cursor: pointer;
+    transform-origin: center center;
+    transform-box: fill-box;
+}
+
